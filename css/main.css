@@ -27,6 +27,7 @@ button:-moz-focusring {
 .container {
 	background: white;
 	border: 8px solid black;
+	padding: 0 0.5rem;
 }
 
 .container.-header {
@@ -150,13 +151,14 @@ button:-moz-focusring {
 
 .inner_container.-list {
 	margin: 0 auto;
-	max-width: 1200px;
+	max-width: 960px;
 	width: 86%;
 }
 
 .history_list {
 	margin: 1rem 0;
 	padding-bottom: 20px;
+	padding-left: 0;
 }
 
 .history_list > .item {
