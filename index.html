@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+	<head>
+		<meta charset="utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+		<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, user-scalable=no" />
+		<meta name="msapplication-tap-highlight" content="no" />
+		<title>File Download</title>
+		<link rel="shortcut icon" href="link-icon-thumbnail.png" hreflang="en" />
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu:400,700" hreflang="en" />
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/4.1.1/normalize.min.css" hreflang="en" />
+		<link rel="stylesheet" href="css/main.css" hreflang="en" />
+	</head>
+	<body class="wrapper">
+		<div id="input" class="container -header">
+			<div class="inner_container _u-center -input_form">
+				<form id="url-add" action="" method="get" name="url-add" target="_self">
+					<label accesskey="u" for="url" form="url-add">Enter a url:</label>
+					<input id="url" autocomplete="off" autofocus form="url-add" name="url" type="url" />
+					<div id="group" class="button_group">
+						<button id="parse" accesskey="p" form="url-add" name="parse" type="submit" title="Add Url"><span>+</span></button>
+						<button id="clearhist" accesskey="c" form="url-add" name="clearhist" type="button" title="Clear History"><span>&ndash;</span></button>
+					</div>
+				</form>
+			</div>
+		</div>
+		<div class="container _u-center">
+			<h1>History</h1>
+			<div class="inner_container -list">
+				<ul id="history" class="history_list"></ul>
+			</div>
+		</div>
+		<script type="text/javascript" src="js/main.js"></script>
+	</body>
+</html>

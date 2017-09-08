@@ -1,0 +1,226 @@
+/* CSS Document */
+
+*,
+::before,
+::after {
+	box-sizing: inherit;
+}
+
+html {
+	box-sizing: border-box;
+}
+
+button:-moz-focusring {
+	outline: none !important;
+}
+
+.wrapper {
+	background: cornflowerblue;
+	font: normal 16px/1.5 "Ubuntu", "Helvetica Neue", "HelveticaNeue", "Helvetica", "Arial", sans-serif;
+	margin: 8px;
+}
+
+._u-center {
+	text-align: center !important;
+}
+
+.container {
+	background: white;
+	border: 8px solid black;
+}
+
+.container.-header {
+	margin-bottom: -8px;
+	padding: 0.5rem;
+	position: relative;
+	top: 0;
+	z-index: 10;
+}
+
+@supports (position: sticky) or (position: -webkit-sticky) {
+	.container.-header {
+		position: -webkit-sticky;
+		position: sticky;
+	}
+}
+
+.wrapper.-sticky::before {
+	content: " ";
+	display: block;
+	height: 48px;
+}
+
+.wrapper.-sticky > .container.-header {
+	left: 8px;
+	position: fixed;
+	right: 8px;
+}
+
+.-input_form form {
+	align-items: center;
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: space-between;
+	margin: 0 auto;
+	max-width: 960px;
+	width: 86%;
+}
+
+.-input_form label {
+	font-weight: bold;
+	margin: 0.25rem 0.5rem 0.25rem 0;
+}
+
+.-input_form input[type="url"] {
+	border: 1px solid black;
+	color: #444;
+	flex-grow: 1;
+	height: 28px;
+	margin: 0.25rem 0.5rem 0.25rem 0;
+	padding: 1px 4px 1px 2px;
+	text-indent: 2px;
+	transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.-input_form button {
+	background: white;
+	border: 1px solid black;
+	cursor: pointer;
+	font-weight: bold;
+	height: 28px;
+	margin-right: 0.25rem;
+	padding: 1px;
+	transition: border-color 0.3s ease, box-shadow 0.3s ease;
+	vertical-align: top;
+	width: 28px;
+}
+
+.-input_form input[type="url"]:hover,
+.-input_form input[type="url"]:focus,
+.-input_form button:hover,
+.-input_form button:focus,
+.-input_form button:active {
+	border-color: cornflowerblue;
+}
+
+.-input_form input[type="url"]:focus,
+.-input_form button:focus {
+	box-shadow: 0 0 5px 1px rgba(100, 149, 237, 0.77);
+	outline: 0 none;
+}
+
+.-input_form input[type="url"]:hover:invalid,
+.-input_form input[type="url"]:focus:invalid,
+.-input_form input[type="url"]:invalid + .button_group > button:first-child:focus,
+.-input_form input[type="url"]:invalid + .button_group > button:first-child:hover {
+	border-color: crimson;
+}
+
+.-input_form input[type="url"]:focus:invalid,
+.-input_form input[type="url"]:invalid + .button_group > button:first-child:focus {
+	box-shadow: 0 0 5px 1px rgba(237, 20, 61, 0.77);
+}
+
+.-input_form button:active {
+	background: #efefef;
+}
+
+.-input_form button:active > span {
+	left: 1px;
+	position: relative;
+	top: 1px;
+}
+
+.button_group {
+	display: inline-block;
+	margin: 0.25rem 0;
+}
+
+.button_group > button:last-child {
+	margin: 0;
+}
+
+.container > h1 {
+	color: firebrick;
+	font-size: 2rem;
+	font-weight: bold;
+	letter-spacing: -0.0625rem;
+	margin: 0.875rem 0 1.5rem;
+}
+
+.inner_container.-list {
+	margin: 0 auto;
+	max-width: 1200px;
+	width: 86%;
+}
+
+.history_list {
+	margin: 1rem 0;
+	padding-bottom: 20px;
+}
+
+.history_list > .item {
+	border-bottom: 1px solid silver;
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: space-between;
+	line-height: 2.125rem;
+	list-style: none;
+	padding: 0 3px;
+	transition: background 0.3s ease;
+}
+
+.history_list > .item:hover {
+	background: lavender;
+}
+
+.item > .download_link {
+	font-size: 1.125rem;
+	max-width: calc(100% - 22px);
+	overflow: hidden;
+	text-decoration: none;
+	text-overflow: ellipsis;
+}
+
+.item > .remove {
+	color: black;
+	cursor: pointer;
+	font-size: 1.125rem;
+	font-weight: bold;
+	text-decoration: none;
+	transition: color 0.3s ease;
+	width: 16px;
+}
+
+.item > .download_link:hover {
+	text-decoration: underline;
+}
+
+.item > .remove:hover {
+	color: red;
+}
+
+.item > .download_link:focus,
+.item > .remove:focus {
+	outline: 1px dotted black;
+}
+
+.item > .remove:active {
+	color: firebrick;
+}
+
+@media (max-width: 532px) {
+	.-input_form form {
+		flex-direction: column;
+	}
+	.-input_form label {
+		margin: 0 0 0.25rem;
+	}
+	.-input_form input[type="url"] {
+		flex-grow: 0;
+		margin-right: 0;
+	}
+	.-input_form .button_group {
+		margin-bottom: 0;
+	}
+}
