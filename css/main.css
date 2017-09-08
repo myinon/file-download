@@ -180,6 +180,7 @@ button:-moz-focusring {
 	overflow: hidden;
 	text-decoration: none;
 	text-overflow: ellipsis;
+	white-space: nowrap;
 }
 
 .item > .remove {
