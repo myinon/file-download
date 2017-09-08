@@ -1,0 +1,10 @@
+*.html text eol=crlf
+*.css  text eol=crlf
+*.js   text eol=crlf
+*.json text eol=crlf
+*.md   text eol=crlf
+*.gif  binary
+*.jpg  binary
+*.jpeg binary
+*.png  binary
+*.ico  binary
