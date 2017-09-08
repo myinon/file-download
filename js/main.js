@@ -204,7 +204,7 @@ function registerListeners() {
 		return false;
 	}, false);
 
-	if (!CSS.supports("position", "sticky") || !CSS.supports("position", "-webkit-sticky")) {
+	if (!CSS.supports("position", "sticky") && !CSS.supports("position", "-webkit-sticky")) {
 		fromtop = input.offsetTop;
 		sheet = createStyleSheet();
 		stickyNav = function(e) {
